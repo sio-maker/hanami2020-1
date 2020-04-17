@@ -1,0 +1,25 @@
+<div class="post-index main">
+<h1><i class="fas fa-fan"></i> HANAMI 2020<span class="one">+1</span></h1>
+<div class="post-index-content contaner" >
+<h1>みんなの目標と来年のお花見</h1>
+<p>Everyone's this year gole & next year cherry blossom party</p>
+　<div class="tweets-container">
+  <% @posts.each do |t| %>
+    <div class="tweet">
+      <p><i class="fas fa-fan"></i> 私、<span><%=t.user.name%></span>は今年一年間<span><%=t.gole%></span>を頑張って来年の春<span><%=t.who%></span>と、<span><%=t.where%></span>で最高のお花見をします!</p>
+      <div class="index-list">
+      <%=link_to "詳細",post_path(t.id)%>
+      
+      <%if user_signed_in?%>
+       <%if t.user_id == current_user.id%>
+        <%= link_to "編集する", edit_post_path(t.id) %>
+        <%= link_to "削除する", post_path(t.id), method: :delete %>
+       <%end%>
+      <%end%> 
+      </div>
+    </div>
+  <% end %>
+  </div>
+</div>
+</div>
+

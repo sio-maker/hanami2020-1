@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>HanamiApp</title>
+    <link href="https://use.fontawesome.com/releases/v5.11.1/css/all.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Caveat rel="stylesheet">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  
+  </head>
+
+  <body>
+  <header>
+    <div class=contaner>
+      <%=link_to "HANAMI 2020+1",root_path%>
+      <div class="header-list">
+      <%=link_to "みんなの投稿",posts_index_path%>
+      <%if user_signed_in?%>
+        <%=link_to "新規投稿",posts_new_path%>
+        <%= link_to 'ログアウト', destroy_user_session_path, method: :delete %>
+        <p class="log">
+        <%= current_user.name%>
+        </p>
+      <%else%>
+        <%= link_to "ログイン", new_user_session_path %>
+        <%= link_to "新規登録", new_user_registration_path %>
+      <%end%>
+      </div>
+    </div>
+  </header>
+  <%if flash[:notice]%>
+  <div class="flash">
+  <%= flash[:notice]%>
+  </div>
+  <%end%>
+  
+    <%= yield %>
+   
+
+  </body>
+</html>

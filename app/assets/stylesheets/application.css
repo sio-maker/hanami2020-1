@@ -1,0 +1,425 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+ 
+ @import 'font-awesome-sprockets';
+ @import 'font-awesome';
+ @import url('https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c');
+ @import '~bootstrap/scss/bootstrap';
+ *{
+   margin:0;
+   padding:0;
+ }
+ html, body { height: 100%; }
+
+ .contaner{
+   width: 90%;
+   margin: auto;
+ }
+ .main{
+  padding-top: 60px;
+ }
+ .fa-fan{
+   color: #ee817b;
+   animation: r1 2s linear infinite;
+ }
+ 
+ @keyframes r1 {
+  0%   { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+ .flash{
+   width: 100%;
+   padding-top:60px ;
+   height: 60px;
+   background-color: #90ee90;
+   font-size: 30px;
+   text-align: center;
+   font-family: 'M PLUS Rounded 1c', sans-serif;
+   line-height: 60px;
+   color: white;
+ }
+ .error{
+   background-color: #90ee90;
+   padding: 10px;
+   color: white;
+   font-size: 20px;
+   border-radius: 10px;
+   width: 80%;
+   margin-top: 10px;
+ }
+/* header -----------------------------*/
+header {
+   background-color: #ee817b;
+   height: 60px;
+   width: 100%;
+   position: fixed;
+   font-family: 'M PLUS Rounded 1c', sans-serif;
+}
+header a{
+  color:white;
+  text-decoration: none; 
+  padding:20px 5px 20px 5px;
+  border-radius: 5px;
+  line-height: 60px;
+  
+}
+header a:hover{
+  background-color: #fcecea;
+  color: #ee817b;
+  transition: all 1s;
+}
+.header-list{
+  float: right;
+}
+.log{
+  display: inline-block;
+  color: #7cfc00;
+}
+/* footer(必要なら)------------------------------- */
+
+.footer{
+  width: 100%;
+  height: 120px;
+  background-color: #ee817b;
+}
+/* top ----------------------------------*/
+.section1{
+  width:100%;
+  height:500px ;
+  background-color: #fcecea;
+  color: #ee817b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.section1 h1{
+  font-size: 60px;
+  font-family: 'Caveat', cursive;
+}
+.one{
+  color: #90ee90;
+}
+
+/* about ----------------------------------*/
+.section2{
+  background-color: #928484;
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  color:white;
+  display: flex;
+
+  height: 500px;
+}
+.section2 h1{
+  padding-top:15px ;
+  padding-bottom: 15px;
+  text-align: center;
+
+}
+.about{
+  padding:30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+}
+.about-text{
+  margin-left: 10px;
+  margin-right :10px;
+  border-left: 1px solid  #f6afaa;
+  flex-direction: column;
+  justify-content: center;
+  width:350px;
+  text-align: center;
+}
+.about-text i{
+  font-size: 70px;
+}
+.about-text-content{
+  padding-top:25px
+}
+.about-text-content p{
+  padding:10px 20px 0 20px;
+}
+
+/* how --------------------------------*/
+.section3{
+  height: 500px;
+  width:100%;
+  background-color: #fcecea;
+  text-align: center;
+  display: flex;
+  flex-direction:column;
+  align-items: center;
+  justify-content: center;
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+}
+
+.section3 h1{
+  color: #ee817b;
+
+}
+.how-text{
+  width:30%;
+  padding-top:30px;
+  padding-bottom: 30px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid#ee817b;
+  border-radius: 10px;
+}
+.how-text i{
+  font-size: 70px;
+  color: #ee817b;
+  padding-left: 30px;
+}
+.how-text p{
+  padding-left: 50px;
+  padding-right: 30px;
+}
+.bottun-area{
+  padding-top:20px;
+  font-size: 30px;
+}
+
+
+.bottun-area a{
+text-decoration: none;
+color: white;
+background-color: #ee817b;
+padding:5px;
+border-radius: 10px;
+border: 2px solid #fcecea;
+}
+
+.bottun-area a:hover{
+  opacity: 0.8; 
+  border: 2px solid #7cfc00;
+  transition: all 0.5s;
+}
+
+
+/* post#index ----------------------------------- */
+.post-index{
+  height: 100%;
+  width: 100%;
+  background-color: #fcecea;
+}
+.post-index h1{
+  font-family: 'Caveat', cursive;
+  color: #ee817b;
+
+}
+.post-index-content{
+  text-align: center;
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+
+} 
+.post-index-content h1{
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  color: #928484;
+}
+.post-index-content p{
+  font-family: 'Caveat', cursive;
+  padding-top: 10px;
+  color: #f6afaa;
+}
+.tweet {
+  background-color: white;
+  border-bottom: 1px  solid #f6afaa;
+  padding:20px;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.index-list{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-left: 20px;
+  color: #ee817b;
+}
+.index-list a{
+  text-decoration: none;
+  color: #928484;
+  padding-left: 20px;
+  padding-top: 7px;
+}
+.tweet a:hover{
+  opacity: 0.7;
+  color: #ee817b;
+  transition: all 0.5s;
+}
+.tweet p{
+  color: black;
+}
+.tweet i{
+  color:#ee817b;
+  font-size: 20px;
+
+}
+.tweet span{
+  color:#ee817b;
+  font-weight: bold;
+}
+
+/* posts#new ----------------------------*/
+.post-new{
+  background-color: #fcecea;
+  height: 100%;
+
+}
+.post-new h1{
+    font-family: 'Caveat', cursive;
+    color: #ee817b;
+}
+.post-new-content{
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.post-new-content h1{
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  color: #928484;
+  padding-top: 20px;
+}
+.post-new-content p{
+  color: #928484;
+  font-family: 'Caveat', cursive;
+}
+.post-new-text{
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  font-size: 20px;
+  padding-top: 20px;
+
+}
+
+.field{
+  margin-top:20px ;
+  padding: 40px;
+  background-color: white;
+  border: 2px solid#ee817b;
+  border-radius: 30px;
+  font-size: 20px;
+}
+.field p{
+  color:black;
+}
+.field span{
+  color: #ee817b;
+}
+
+
+.field input[type="text"]{
+ border-radius: 5px;
+ font-size: 25px;
+ 
+}
+.post-new-content input[type="submit"] {
+  width: 200px;
+  font-size: 20px;
+  color: white;
+  background-color: #ee817b;
+  border: 2px solid #fcecea;
+  padding:5px;
+  border-radius: 10px;
+  margin-top: 30px;
+  font-size: 40px;
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+}
+.post-new-content input[type="submit"]:hover{
+  opacity: 0.8; 
+  border: 2px solid #7cfc00;
+  transition: all 0.5s;
+}
+.fa-arrow-right{
+  font-size: 40px;
+  color: #928484;
+}
+
+/* posts#show----------------------------------------- */
+
+.show-bottun-area{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.post-new-content a{
+  width: 230px;
+  border: 2px solid #fcecea;
+  color: white;
+  background-color: #ee817b;
+  text-decoration: none;
+  padding:5px;
+  border-radius: 10px;
+  margin:30px 15px 0 15px;
+  font-size: 30px;
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  
+}
+.post-new-content a:hover{
+  opacity: 0.8; 
+  border: 2px solid #7cfc00;
+  transition: all 0.5s;
+}
+
+
+/* signup------------------------------------ */
+.sign{
+  margin-top: 20px;
+  padding: 40px;
+  background-color: white;
+  border: 1px solid #ee817b;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+}
+.sign-area{
+  display: flex;
+  flex-direction: row;
+  justify-content:start;
+  align-items: center;
+  padding: 10px;
+}
+.login-area{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  font-size: 20px;
+}
+.login{
+  margin-top: 30px;
+  margin-left: 40px;
+}
+.login-render{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-size: 10px;
+  margin-top: 50px;
+}
+/* animation-------------------- */
+

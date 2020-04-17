@@ -1,0 +1,54 @@
+<div class="section1">
+  <h1><i class="fas fa-fan" ></i> HANAMI 2020<span class="one">+1</span></h1>
+</div>
+
+<div class="section2">
+  <div class=contaner>
+    <h1>来年のお花見を最高に楽しもう</h1>
+    <div class="about">
+      <div class="about-text">
+        <i class="fas fa-ambulance"></i>
+        <div class="about-text-content">
+        <h3>コロナで花見ができない！</h3>
+        <p>冬があけて春になりました。桜も咲いてお花見がしたいですね。しかし、コロナウィルスの感染を食い止めるためにここは我慢しなければいけないでしょう。</p>
+        </div>
+      </div>
+      <div class="about-text">
+        <i class="fas fa-globe-asia"></i>
+        <div class="about-text-content">
+        <h3>お花見を先延ばしにして世界を救おう！</h3>
+        <p>感染の拡大防止には一人一人の意識が大切。ここでお花見を我慢すれば世界を救ったと言ってもいいでしょう。</p>
+        </div>
+      </div>
+      <div class="about-text">
+      　<i class="fas fa-heart"></i>
+        <div class="about-text-content">
+        <h3>来年のお花見を楽しみに待とう！</h3>
+        <p>今年一年は来年のお花見を楽しみに待つ時間にしてみてはどうでしょう。きっと楽しくなること間違いなし！</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>  
+<div class="section3">
+  <h1>LET'S START!</h1>
+  <div class="how-text">
+  <i class="fas fa-share-alt"></i>
+    <p>"HANAMI 2020+1"では来年のお花見をより楽しみにすべく、『あなたが今年頑張りたいこと』と『来年のお花見の予定』をシェアできます。</p>
+  </div>
+  <div class="bottun-area">
+   <i class="fas fa-arrow-right"></i>
+    <%=link_to "みんなの投稿を見る",posts_index_path%>
+   <%if user_signed_in?%>
+   <%else%>
+   <i class="fas fa-arrow-right"></i>
+   <%= link_to "新規登録", new_user_registration_path %>
+   <%end%> 
+  </div>
+
+</div>
+<div class="footer">
+</div>
+
+
+

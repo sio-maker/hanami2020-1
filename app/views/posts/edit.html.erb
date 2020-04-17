@@ -1,0 +1,19 @@
+<div class=" post-new main">
+<h1><i class="fas fa-fan"></i> HANAMI 2020<span class="one">+1</span></h1>
+  <div class="post-new-content contaner">
+  <h1>投稿を編集する</h1>
+  <p>Edit my post</p>
+    <%@post.errors.full_messages.each do |m|%>
+      <div class="error">
+     <%= m %>
+      </div>
+    <%end%>
+    <%= form_for @post do |f| %>
+      <div class="field">
+        <p>私、<%=current_user.name%>は一年間<%= f.text_field :gole, :size => 50 %>を頑張って、来年の春<%=f.text_field :who, :size => 20%>と、<%=f.text_field :where, :size => 20%>で最高のお花見をします！</p>
+      </div>
+      <i class="fas fa-arrow-right"></i>
+      <%= f.submit "編集する" %>
+    <% end %>
+  </div>
+</div>

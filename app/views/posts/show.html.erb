@@ -1,0 +1,21 @@
+<div class="post-new main">
+<h1><i class="fas fa-fan"></i> HANAMI 2020<span class="one">+1</span></h1>
+<div class="post-new-content contaner" >
+  <h1>投稿詳細</h1>
+  <div class="field">
+  <p><i class="fas fa-fan"></i> 私、<span><%=@post.user.name%></span>は今年一年間<span><%=@post.gole%></span>を頑張って来年の春<span><%=@post.who%></span>と、<span><%=@post.where%></span>で最高のお花見をします!</p>
+  </div>
+  <div class=show-bottun-area>
+    <%=link_to posts_index_path do%>
+      一覧に戻る　<i class="fas fa-undo-alt"></i>
+    <%end%>
+    <%if user_signed_in?%>
+      <%if @post.user_id == current_user.id%>
+        <%=link_to edit_post_path(@post.id) do%>
+       編集する　<i class="fas fa-edit"></i>
+        <%end%>
+      <%end%>
+    <%end%>  
+  </div>
+</div>
+</div>
